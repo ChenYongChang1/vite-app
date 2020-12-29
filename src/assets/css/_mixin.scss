@@ -1,0 +1,25 @@
+/** 全局共用mixin */
+/** 字体使用 Semibold*/
+@mixin fontFamilySemibold() {
+  font-family: PingFangSC-Semibold, PingFang SC, sans-serif;
+  font-weight: 600;
+}
+/** 字体使用 Medium*/
+@mixin fontFamilyMedium() {
+  font-family: PingFangSC-Medium, PingFang SC, sans-serif;
+  font-weight: 500;
+}
+/** 字体使用 light*/
+@mixin fontFamilyLight() {
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+}
+/*文本格式化，超出范围，显示省略号 多行*/
+@mixin ellipsisRow($width: auto, $row: 1) {
+  width: $width;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $row;
+  -webkit-box-orient: vertical;
+}
